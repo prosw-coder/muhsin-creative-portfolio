@@ -273,6 +273,7 @@ let slides=[['الفكرة أولاً','من التصور إلى التنفيذ'
 function drawSlide(){let s=slides[slide];document.getElementById('presentation').innerHTML='<div class="pres-slide"><small>MUHSIN / 0'+(slide+1)+'</small><h3>'+s[0]+'</h3><b>'+s[1]+'</b><p>'+s[2]+'</p></div>';document.getElementById('prev').onclick=()=>{slide=(slide+2)%3;drawSlide()};document.getElementById('next').onclick=()=>{slide=(slide+1)%3;drawSlide()}}
 function wireEntry(){document.getElementById('addEntry').onclick=()=>{let n=document.getElementById('entryName').value.trim(),d=document.getElementById('entryDept').value.trim(),out=document.getElementById('entryResult');out.textContent=n&&d?'✓ تمت إضافة '+n+' — '+d+' إلى النموذج التجريبي.':'يرجى تعبئة الحقلين.'}}
 
+window.MUHSIN_EMAILJS={publicKey:'R_s2wWPPztV5aZR4y',serviceId:'service_0p61a4i',templateId:'template_il8v994'};
 const requestModal=document.getElementById('requestModal'),requestForm=document.getElementById('requestForm'),requestService=document.getElementById('requestService'),requestStatus=document.getElementById('requestStatus'),requestSubmit=document.getElementById('requestSubmit');
 const serviceLabels={word:'Word وكتابة وتنسيق المستندات',excel:'Excel والجداول والبيانات',slides:'PowerPoint والعروض التقديمية',data:'إدخال البيانات'};
 function openRequest(k){clearInterval(timer);panel.classList.remove('show');requestForm.reset();requestStatus.className='request-status';requestStatus.textContent='';requestService.value=serviceLabels[k]||'';requestModal.classList.add('open');document.body.style.overflow='hidden';}
