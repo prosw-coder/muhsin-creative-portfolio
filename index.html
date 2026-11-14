@@ -23,6 +23,30 @@ section{position:relative}.section{padding:105px 0}.section-head{display:flex;ju
 .gallery{padding:30px 0 110px}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:25px}.filter{background:transparent;border:1px solid #ffffff27;color:#b8c3bd;padding:9px 15px;border-radius:30px;font-size:10px;transition:.2s}.filter.active,.filter:hover{background:var(--acid);border-color:var(--acid);color:#121a15}.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.gallery-item{position:relative;height:285px;border-radius:17px;overflow:hidden;background:#1a2728;cursor:pointer;transition:.35s}.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .7s,filter .5s}.gallery-item:hover img{transform:scale(1.07);filter:saturate(1.1)}.gallery-item:after{content:"";position:absolute;inset:40% 0 0;background:linear-gradient(transparent,#06100edb)}.gallery-info{position:absolute;z-index:2;bottom:17px;right:18px;left:18px;display:flex;align-items:end;justify-content:space-between}.gallery-info strong{font:600 15px Alexandria}.gallery-info small{display:block;color:#c0cdc4;font-size:10px;margin-top:5px}.gallery-info b{width:33px;height:33px;border:1px solid #ffffff88;border-radius:50%;display:grid;place-items:center;font-weight:400}.gallery-item.hide{display:none}
 .about-typing-icon{display:inline-flex;align-items:center;gap:5px;margin-inline-start:9px;padding:5px 9px;border:1px solid #9fca4b66;border-radius:9px;background:#d9ff6922;color:#789d2e;font:700 13px/1.2 Arial,sans-serif;vertical-align:middle;direction:ltr}.about-typing-icon .typing-caret{display:inline-block;width:2px;height:15px;background:#789d2e;animation:aboutCaret .75s steps(2,end) infinite}@keyframes aboutCaret{50%{opacity:0}}.about-typing-icon .typing-dots{display:inline-flex;gap:2px;align-items:center}.about-typing-icon .typing-dots i{display:block;width:3px;height:3px;border-radius:50%;background:currentColor;animation:aboutDots 1.1s infinite}.about-typing-icon .typing-dots i:nth-child(2){animation-delay:.15s}.about-typing-icon .typing-dots i:nth-child(3){animation-delay:.3s}@keyframes aboutDots{0%,70%,100%{opacity:.25;transform:translateY(0)}35%{opacity:1;transform:translateY(-2px)}}.about{padding:80px 0}.about-box{background:var(--cream);color:#132019;border-radius:25px;padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.about-box h2{font:650 34px Alexandria;margin:12px 0}.about-box p{color:#69766d;line-height:2;font-size:13px}.principles{display:grid;grid-template-columns:1fr 1fr;gap:10px}.principle{background:#fff;border:1px solid #e6e8df;border-radius:14px;padding:18px}.principle b{display:block;font:700 22px Alexandria;color:#718b38}.principle span{font-size:10px;color:#667269}
 .contact{padding:90px 0 110px;text-align:center}.contact h2{font:650 clamp(34px,5vw,57px) Alexandria;margin:15px 0}.contact p{color:#a5b1aa;font-size:13px;line-height:2}.contact .btn{margin-top:18px}footer{border-top:1px solid var(--line);padding:24px 0;color:#7d8a83;font-size:10px;display:flex;justify-content:space-between}.modal{position:fixed;inset:0;z-index:40;background:#050908ed;display:none;place-items:center;padding:22px}.modal.open{display:grid}.modal img{max-width:min(100%,1000px);max-height:82vh;object-fit:contain;border-radius:12px}.modal button{position:absolute;top:22px;left:22px;background:#fff;color:#111;border:0;border-radius:50%;width:42px;height:42px;font-size:20px}
+
+.request-modal{position:fixed;inset:0;z-index:60;background:#050908ed;display:none;place-items:center;padding:18px;overflow-y:auto}
+.request-modal.open{display:grid}
+.request-card{width:min(100%,680px);max-height:92vh;overflow:auto;background:#111a1c;border:1px solid #ffffff20;border-radius:22px;padding:25px;box-shadow:0 25px 90px #0009}
+.request-top{display:flex;align-items:flex-start;justify-content:space-between;gap:15px;margin-bottom:18px}
+.request-top h3{font:650 24px Alexandria;margin:5px 0 8px}
+.request-top p{font-size:12px;color:#aab7b1;line-height:1.9;margin:0}
+.request-close{flex:0 0 38px;width:38px;height:38px;border:1px solid #ffffff35;border-radius:50%;background:transparent;color:#fff;font-size:22px}
+.request-form{display:grid;gap:13px}
+.request-form label{display:grid;gap:7px;color:#dce5df;font-size:11px}
+.request-form input,.request-form textarea,.request-form select{width:100%;border:1px solid #ffffff25;background:#0b1213;color:#fff;border-radius:11px;padding:12px;font:inherit;font-size:12px;outline:none}
+.request-form input:focus,.request-form textarea:focus,.request-form select:focus{border-color:var(--acid)}
+.request-form textarea{min-height:105px;resize:vertical;line-height:1.8}
+.request-form input[type=file]{padding:10px}
+.request-form input[type=file]::file-selector-button{border:0;border-radius:7px;background:#d9ff69;color:#142019;padding:8px 10px;margin-inline-end:10px}
+.request-hint{font-size:10px;color:#87958e;line-height:1.7}
+.request-submit{border:0;border-radius:30px;background:var(--acid);color:#111a14;padding:14px 20px;font:700 12px inherit;cursor:pointer}
+.request-submit:disabled{opacity:.55;cursor:wait}
+.request-status{display:none;border-radius:12px;padding:12px;font-size:12px;line-height:1.8}
+.request-status.show{display:block}
+.request-status.success{background:#d9ff6918;color:#d9ff69;border:1px solid #d9ff6944}
+.request-status.error{background:#ff916e18;color:#ffb19a;border:1px solid #ff916e55}
+@media(max-width:600px){.request-card{padding:18px}.request-top h3{font-size:20px}}
+
 .reveal{opacity:0;transform:translateY(25px);transition:opacity .7s,transform .7s}.reveal.visible{opacity:1;transform:none}
 @media(max-width:900px){.hero{grid-template-columns:1fr;gap:5px;padding-top:60px}.hero-copy{text-align:center}.hero-copy .eyebrow{justify-content:center}.hero-copy>p{margin-inline:auto}.hero-actions,.hero-meta{justify-content:center}.hero-art{height:440px}.services-grid{grid-template-columns:repeat(2,1fr)}.creative-grid{grid-template-columns:1fr 1fr}.creative-card{min-height:320px}.edit-shell{grid-template-columns:1fr}.edit-copy{max-width:650px}.gallery-grid{grid-template-columns:repeat(2,1fr)}.about-box{grid-template-columns:1fr}}
 @media(max-width:600px){.wrap{width:calc(100% - 30px)}nav{height:67px}.navlinks{display:none}.availability{display:none}.navbtn{font-size:10px;padding:9px 13px}.brand{font-size:20px}.hero{padding:55px 0 35px;min-height:0}h1{font-size:43px}.hero-copy>p{font-size:13px}.hero-art{height:365px}.hero-photo,.hero-photo-shade{width:76%;height:84%}.hero-frame{width:80%;height:88%}.hero-stamp{width:82px;height:82px;top:22px;font-size:8px}.hero-stamp b{font-size:18px}.hero-label{bottom:20px;font-size:9px}.floating-chip{font-size:9px;right:0}.hero-meta{gap:16px;margin-top:30px}.hero-meta strong{font-size:14px}.section{padding:72px 0}.section-head{display:block}.section-head>p{margin-top:14px}.light{border-radius:20px;padding:48px 0}.services-grid{gap:9px}.service{padding:15px;min-height:195px}.service-icon{width:43px;height:43px;margin-bottom:19px}.service h3{font-size:13px}.service p{font-size:10px}.demo-panel{padding:13px}.demo-stage{padding:10px}.doc{padding:16px}.creative{padding:75px 0 50px}.creative-grid{grid-template-columns:1fr}.creative-card{min-height:290px}.editing{padding:35px 0 75px}.edit-shell{padding:18px;gap:20px}.edit-copy h3{font-size:23px}.compare{height:270px}.gallery{padding:10px 0 75px}.gallery-grid{grid-template-columns:1fr 1fr;gap:8px}.gallery-item{height:205px;border-radius:12px}.gallery-info{right:10px;left:10px;bottom:11px}.gallery-info strong{font-size:11px}.gallery-info small{font-size:9px}.gallery-info b{width:27px;height:27px}.about{padding:45px 0}.about-box{padding:24px;gap:20px}.about-box h2{font-size:26px}.principle{padding:13px}.contact{padding:70px 0}.contact h2{font-size:34px}footer{flex-direction:column;text-align:center;gap:9px}}
@@ -191,7 +215,49 @@ section{position:relative}.section{padding:105px 0}.section-head{display:flex;ju
 <section class="contact" id="contact"><div class="wrap reveal"><div class="kicker">08 — LET'S MAKE SOMETHING <span class="section-mark mark-contact" aria-hidden="true">↗</span></div><h2>عندك فكرة؟ خلّينا نبدأ.</h2><p>إذا كنت تبحث عن مستند مرتب، عرض تقديمي مميز، أو محتوى بصري مختلف، يسعدني نناقش فكرتك.</p><span class="btn btn-primary">بيانات التواصل ستضاف قريباً ↗</span></div></section>
 </main>
 <footer class="wrap"><span>© 2026 MUHSIN CREATIVE STUDIO</span><span>Crafted with intention · صُنع بعناية</span></footer>
+
+<div class="request-modal" id="requestModal" role="dialog" aria-modal="true" aria-labelledby="requestTitle">
+  <div class="request-card">
+    <div class="request-top">
+      <div><div class="kicker">MUHSIN — SERVICE REQUEST</div><h3 id="requestTitle">تفاصيل طلبك</h3><p>اختر الخدمة التي تحتاجها، واكتب تفاصيل طلبك وسنتواصل معك في أقرب وقت.</p></div>
+      <button class="request-close" type="button" id="requestClose" aria-label="إغلاق">×</button>
+    </div>
+    <form class="request-form" id="requestForm" enctype="multipart/form-data">
+      <label>الخدمة المطلوبة
+        <select name="service" id="requestService" required>
+          <option value="">اختر الخدمة</option>
+          <option>Word وكتابة وتنسيق المستندات</option>
+          <option>Excel والجداول والبيانات</option>
+          <option>PowerPoint والعروض التقديمية</option>
+          <option>الذكاء الاصطناعي وصناعة المحتوى</option>
+          <option>تعديل الصور ومعالجتها</option>
+          <option>التصوير الفوتوغرافي</option>
+          <option>إدخال البيانات</option>
+          <option>خدمة أخرى</option>
+        </select>
+      </label>
+      <label>تفاصيل طلبك
+        <textarea name="details" placeholder="اشرح ما الذي تحتاج إلى تنفيذه، وأي متطلبات أو ملاحظات مهمة..." required></textarea>
+      </label>
+      <label>الاسم الكامل
+        <input name="name" type="text" autocomplete="name" placeholder="اكتب اسمك" required maxlength="100">
+      </label>
+      <label>رقم واتساب فعّال مع مفتاح الدولة
+        <input name="whatsapp" type="tel" autocomplete="tel" placeholder="+962 7X XXX XXXX" required maxlength="25">
+      </label>
+      <label>الملفات المرفقة (اختياري)
+        <input name="attachments" type="file" multiple>
+        <span class="request-hint">أرفق الملفات المرتبطة بطلبك. يُرجى مراعاة حدود حجم ومرفقات خدمة البريد.</span>
+      </label>
+      <div class="request-hint">سيتم استخدام بياناتك للتواصل معك بخصوص هذا الطلب فقط.</div>
+      <button class="request-submit" id="requestSubmit" type="submit">إرسال الطلب ↗</button>
+      <div class="request-status" id="requestStatus" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+
 <div class="modal" id="imageModal"><button id="modalClose" aria-label="إغلاق">×</button><img id="modalImage" alt="معاينة العمل"></div>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@5/dist/email.min.js"></script>
 <script>
 const panel=document.getElementById('demoPanel'),stage=document.getElementById('demoStage'),demoTitle=document.getElementById('demoTitle');let timer=null,slide=0;
 const demos={
@@ -206,7 +272,38 @@ function fillExcel(){let rows=[['Ahmad','Marketing','Complete','95%'],['Sara','S
 let slides=[['الفكرة أولاً','من التصور إلى التنفيذ','نرتب الفكرة ونحدد الهدف ونبني قصة بصرية واضحة.'],['تصميم مدروس','كل تفصيل له معنى','ألوان متناسقة ومحتوى منظم يسهّل وصول الرسالة.'],['نتيجة تترك أثراً','عرض يعبّر عنك','معلومة واضحة وتجربة بصرية متكاملة.']];
 function drawSlide(){let s=slides[slide];document.getElementById('presentation').innerHTML='<div class="pres-slide"><small>MUHSIN / 0'+(slide+1)+'</small><h3>'+s[0]+'</h3><b>'+s[1]+'</b><p>'+s[2]+'</p></div>';document.getElementById('prev').onclick=()=>{slide=(slide+2)%3;drawSlide()};document.getElementById('next').onclick=()=>{slide=(slide+1)%3;drawSlide()}}
 function wireEntry(){document.getElementById('addEntry').onclick=()=>{let n=document.getElementById('entryName').value.trim(),d=document.getElementById('entryDept').value.trim(),out=document.getElementById('entryResult');out.textContent=n&&d?'✓ تمت إضافة '+n+' — '+d+' إلى النموذج التجريبي.':'يرجى تعبئة الحقلين.'}}
-document.querySelectorAll('.service').forEach(b=>b.addEventListener('click',()=>openDemo(b.dataset.demo)));document.getElementById('demoClose').onclick=()=>{clearInterval(timer);panel.classList.remove('show')};
+
+const requestModal=document.getElementById('requestModal'),requestForm=document.getElementById('requestForm'),requestService=document.getElementById('requestService'),requestStatus=document.getElementById('requestStatus'),requestSubmit=document.getElementById('requestSubmit');
+const serviceLabels={word:'Word وكتابة وتنسيق المستندات',excel:'Excel والجداول والبيانات',slides:'PowerPoint والعروض التقديمية',data:'إدخال البيانات'};
+function openRequest(k){clearInterval(timer);panel.classList.remove('show');requestForm.reset();requestStatus.className='request-status';requestStatus.textContent='';requestService.value=serviceLabels[k]||'';requestModal.classList.add('open');document.body.style.overflow='hidden';}
+function closeRequest(){requestModal.classList.remove('open');document.body.style.overflow='';}
+document.querySelectorAll('.service').forEach(b=>b.addEventListener('click',()=>openRequest(b.dataset.demo)));
+document.getElementById('demoClose').onclick=()=>{clearInterval(timer);panel.classList.remove('show')};
+document.getElementById('requestClose').addEventListener('click',closeRequest);
+requestModal.addEventListener('click',e=>{if(e.target===requestModal)closeRequest()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&requestModal.classList.contains('open'))closeRequest()});
+requestForm.addEventListener('submit',async e=>{
+  e.preventDefault();
+  requestStatus.className='request-status';requestStatus.textContent='';
+  const cfg=window.MUHSIN_EMAILJS||{};
+  if(!cfg.publicKey||!cfg.serviceId||!cfg.templateId){
+    requestStatus.className='request-status show error';
+    requestStatus.textContent='نموذج الطلب جاهز، لكن لم يتم ربط خدمة البريد بعد. يرجى إكمال إعدادات البريد أولاً.';
+    return;
+  }
+  if(!window.emailjs){requestStatus.className='request-status show error';requestStatus.textContent='تعذر تحميل خدمة الإرسال. تحقق من اتصال الإنترنت وحاول مجدداً.';return;}
+  requestSubmit.disabled=true;requestSubmit.textContent='جارٍ إرسال طلبك...';
+  try{
+    await emailjs.sendForm(cfg.serviceId,cfg.templateId,requestForm,{publicKey:cfg.publicKey});
+    requestStatus.className='request-status show success';
+    requestStatus.textContent='تم استلام طلبك بنجاح، وسيتم الرد عليك في أقرب وقت.';
+    requestForm.reset();
+  }catch(err){
+    requestStatus.className='request-status show error';
+    requestStatus.textContent='لم نتمكن من إرسال الطلب حالياً. يرجى المحاولة مرة أخرى لاحقاً.';
+  }finally{requestSubmit.disabled=false;requestSubmit.textContent='إرسال الطلب ↗';}
+});
+
 const range=document.getElementById('compareRange'),before=document.getElementById('beforeImage'),line=document.getElementById('compareLine'),knob=document.getElementById('compareKnob');function compare(){let v=range.value;before.style.clipPath='inset(0 0 0 '+v+'%)';line.style.left=v+'%';knob.style.left=v+'%'}range.addEventListener('input',compare);compare();
 document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));btn.classList.add('active');let f=btn.dataset.filter;document.querySelectorAll('.gallery-item').forEach(item=>item.classList.toggle('hide',f!=='all'&&item.dataset.cat!==f))}));
 const modal=document.getElementById('imageModal'),modalImg=document.getElementById('modalImage');document.querySelectorAll('.gallery-item img').forEach(img=>img.addEventListener('click',()=>{modalImg.src=img.src;modal.classList.add('open')}));document.getElementById('modalClose').onclick=()=>modal.classList.remove('open');modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});
