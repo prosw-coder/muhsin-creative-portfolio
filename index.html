@@ -27,10 +27,125 @@ section{position:relative}.section{padding:105px 0}.section-head{display:flex;ju
 @media(max-width:900px){.hero{grid-template-columns:1fr;gap:5px;padding-top:60px}.hero-copy{text-align:center}.hero-copy .eyebrow{justify-content:center}.hero-copy>p{margin-inline:auto}.hero-actions,.hero-meta{justify-content:center}.hero-art{height:440px}.services-grid{grid-template-columns:repeat(2,1fr)}.creative-grid{grid-template-columns:1fr 1fr}.creative-card{min-height:320px}.edit-shell{grid-template-columns:1fr}.edit-copy{max-width:650px}.gallery-grid{grid-template-columns:repeat(2,1fr)}.about-box{grid-template-columns:1fr}}
 @media(max-width:600px){.wrap{width:calc(100% - 30px)}nav{height:67px}.navlinks{display:none}.availability{display:none}.navbtn{font-size:10px;padding:9px 13px}.brand{font-size:20px}.hero{padding:55px 0 35px;min-height:0}h1{font-size:43px}.hero-copy>p{font-size:13px}.hero-art{height:365px}.hero-photo,.hero-photo-shade{width:76%;height:84%}.hero-frame{width:80%;height:88%}.hero-stamp{width:82px;height:82px;top:22px;font-size:8px}.hero-stamp b{font-size:18px}.hero-label{bottom:20px;font-size:9px}.floating-chip{font-size:9px;right:0}.hero-meta{gap:16px;margin-top:30px}.hero-meta strong{font-size:14px}.section{padding:72px 0}.section-head{display:block}.section-head>p{margin-top:14px}.light{border-radius:20px;padding:48px 0}.services-grid{gap:9px}.service{padding:15px;min-height:195px}.service-icon{width:43px;height:43px;margin-bottom:19px}.service h3{font-size:13px}.service p{font-size:10px}.demo-panel{padding:13px}.demo-stage{padding:10px}.doc{padding:16px}.creative{padding:75px 0 50px}.creative-grid{grid-template-columns:1fr}.creative-card{min-height:290px}.editing{padding:35px 0 75px}.edit-shell{padding:18px;gap:20px}.edit-copy h3{font-size:23px}.compare{height:270px}.gallery{padding:10px 0 75px}.gallery-grid{grid-template-columns:1fr 1fr;gap:8px}.gallery-item{height:205px;border-radius:12px}.gallery-info{right:10px;left:10px;bottom:11px}.gallery-info strong{font-size:11px}.gallery-info small{font-size:9px}.gallery-info b{width:27px;height:27px}.about{padding:45px 0}.about-box{padding:24px;gap:20px}.about-box h2{font-size:26px}.principle{padding:13px}.contact{padding:70px 0}.contact h2{font-size:34px}footer{flex-direction:column;text-align:center;gap:9px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+
+/* Mobile-first refinement */
+.mobile-menu-toggle{display:none;border:1px solid #ffffff35;background:#152020;color:var(--acid);width:40px;height:40px;border-radius:12px;font-size:19px;align-items:center;justify-content:center}
+.mobile-menu{display:none}
+@media(max-width:600px){
+  html{scroll-padding-top:78px}
+  body{font-size:14px;-webkit-text-size-adjust:100%}
+  .wrap{width:calc(100% - 32px)}
+  header{padding-top:env(safe-area-inset-top);background:#0b1012f2}
+  nav{height:64px;gap:10px}
+  .navright{gap:8px}
+  .navbtn{padding:9px 12px;font-size:10px;white-space:nowrap}
+  .mobile-menu-toggle{display:flex;flex:0 0 40px}
+  .mobile-menu{display:flex;flex-direction:column;gap:2px;max-height:0;overflow:hidden;opacity:0;visibility:hidden;transition:max-height .28s ease,opacity .2s ease,padding .28s ease;border-top:1px solid transparent}
+  .mobile-menu.open{max-height:300px;opacity:1;visibility:visible;padding:8px 0 14px;border-top-color:var(--line)}
+  .mobile-menu a{padding:12px 14px;border-radius:10px;color:#d4ddd7;font-size:13px}
+  .mobile-menu a:active,.mobile-menu a:hover{background:#172224;color:var(--acid)}
+  .hero{padding:38px 0 28px;gap:0}
+  .hero-copy{width:100%}
+  .eyebrow{font-size:9px;letter-spacing:.8px}
+  h1{font-size:clamp(34px,9.2vw,43px);line-height:1.45;letter-spacing:-1.6px;margin:18px 0 12px}
+  h1 span:after{height:4px}
+  .hero-copy>p{font-size:12px;line-height:2;margin-top:0;max-width:440px}
+  .hero-actions{gap:9px;margin-top:20px}
+  .btn{min-height:44px;padding:12px 16px;font-size:11px}
+  .hero-meta{gap:0;justify-content:space-between;margin:23px auto 0;max-width:420px}
+  .hero-meta>div{font-size:9px;line-height:1.7}
+  .hero-meta strong{font-size:11px;letter-spacing:-.3px}
+  .hero-art{height:clamp(270px,82vw,350px);margin-top:4px}
+  .hero-photo,.hero-photo-shade{width:72%;height:86%;border-radius:130px 130px 20px 20px}
+  .hero-frame{width:77%;height:90%;border-radius:130px 130px 22px 22px}
+  .hero-stamp{width:70px;height:70px;top:16px;left:2px;font-size:7px}
+  .hero-stamp b{font-size:15px}
+  .floating-chip{top:42%;right:0;padding:8px 10px;font-size:8px}
+  .hero-label{bottom:10px;right:1px;padding:10px 13px;font-size:8px}
+  .hero-label strong{font-size:12px}
+  .marquee{padding:13px 0;font-size:9px}
+  .section{padding:58px 0}
+  .section-head{margin-bottom:24px}
+  .section-head h2{font-size:clamp(23px,6.5vw,30px);line-height:1.5}
+  .section-head>p{font-size:11px;line-height:1.9;margin-top:9px}
+  .light{padding:42px 0;border-radius:17px}
+  .services-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+  .service{min-width:0;min-height:185px;padding:14px 12px;border-radius:14px}
+  .service-icon{width:39px;height:39px;border-radius:12px;margin-bottom:15px}
+  .service-icon svg{width:22px;height:22px}
+  .service h3{font-size:12px;line-height:1.6;overflow-wrap:anywhere}
+  .service p{font-size:9px;line-height:1.8}
+  .service .arrow{left:12px;bottom:10px;font-size:15px}
+  .demo-panel{margin-top:14px;border-radius:15px;padding:12px}
+  .demo-head{font-size:11px}
+  .demo-stage{min-height:190px;padding:9px;border-radius:10px}
+  .doc{padding:13px 12px;min-height:160px}
+  .doc h3{font-size:14px}
+  .type-line{font-size:11px;line-height:1.9}
+  .sheet{font-size:8px}
+  .sheet td,.sheet th{padding:7px 3px;overflow-wrap:anywhere}
+  .pres-slide{padding:17px}
+  .pres-slide h3{font-size:19px}
+  .pres-slide b{font-size:12px}
+  .pres-slide p{font-size:10px}
+  #demoStage label{font-size:10px!important}
+  #demoStage input{min-height:42px;font-size:16px!important}
+  .creative{padding:58px 0 38px}
+  .creative-grid{grid-template-columns:minmax(0,1fr);gap:10px}
+  .creative-card{min-height:0;height:clamp(245px,70vw,315px);border-radius:16px}
+  .creative-copy{right:17px;left:17px;bottom:17px}
+  .creative-copy h3{font-size:20px}
+  .creative-copy p{font-size:10px;line-height:1.8}
+  .creative-tag{top:12px;left:12px;font-size:8px;padding:7px 9px}
+  .editing{padding:28px 0 58px}
+  .edit-shell{padding:15px;gap:15px;border-radius:17px}
+  .edit-copy h3{font-size:21px;line-height:1.6}
+  .edit-copy p{font-size:11px;line-height:1.9}
+  .edit-tools{gap:6px;margin-top:14px}
+  .edit-tools span{font-size:9px;padding:6px 8px}
+  .compare{height:auto;aspect-ratio:4/3;min-height:205px;border-radius:12px;touch-action:pan-y}
+  .compare-label{font-size:8px;top:9px;padding:6px 8px}
+  .compare-knob{width:35px;height:35px;font-size:14px}
+  .gallery{padding:5px 0 58px}
+  .filters{gap:6px;margin-bottom:15px;flex-wrap:nowrap;overflow-x:auto;padding:2px 1px 8px;scrollbar-width:none}
+  .filters::-webkit-scrollbar{display:none}
+  .filter{flex:0 0 auto;padding:9px 12px;font-size:9px;min-height:36px}
+  .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .gallery-item{height:auto;aspect-ratio:4/5;min-width:0;border-radius:11px}
+  .gallery-info{right:9px;left:9px;bottom:9px;gap:5px}
+  .gallery-info strong{font-size:10px;line-height:1.5}
+  .gallery-info small{font-size:7px;line-height:1.5;overflow-wrap:anywhere}
+  .gallery-info b{width:25px;height:25px;flex:0 0 25px;font-size:12px}
+  .about{padding:35px 0}
+  .about-box{padding:20px 17px;border-radius:17px;gap:16px}
+  .about-box h2{font-size:23px;line-height:1.6}
+  .about-box p{font-size:11px;line-height:2}
+  .principles{gap:7px}
+  .principle{padding:12px 10px;border-radius:11px}
+  .principle b{font-size:18px}
+  .principle span{font-size:9px;line-height:1.7}
+  .contact{padding:55px 0 65px}
+  .contact h2{font-size:clamp(25px,7.5vw,34px);line-height:1.5}
+  .contact p{font-size:11px;line-height:2}
+  footer{padding:18px 0 calc(18px + env(safe-area-inset-bottom));font-size:9px;line-height:1.8}
+  .modal{padding:12px}
+  .modal img{max-width:100%;max-height:78dvh}
+  .modal button{top:calc(12px + env(safe-area-inset-top));left:12px;width:40px;height:40px}
+  .reveal{transform:translateY(14px)}
+}
+@media(max-width:360px){
+  .wrap{width:calc(100% - 24px)}
+  .brand{font-size:18px}
+  .navbtn{padding:8px 9px;font-size:9px}
+  .hero-meta strong{font-size:10px}
+  .service{padding:12px 10px;min-height:180px}
+  .gallery-info strong{font-size:9px}
+}
+
 </style>
 </head>
 <body><div class="grain"></div>
-<header><div class="wrap"><nav><a class="brand" href="#">MUHSIN<b>.</b></a><div class="navlinks"><a href="#services">الخدمات</a><a href="#creative">الإبداع البصري</a><a href="#gallery">معرض الأعمال</a><a href="#about">من أنا</a></div><div class="navright"><span class="availability">متاح للمشاريع</span><a class="navbtn" href="#contact">تواصل معي ↗</a></div></nav></div></header>
+<header><div class="wrap"><nav><a class="brand" href="#">MUHSIN<b>.</b></a><div class="navlinks"><a href="#services">الخدمات</a><a href="#creative">الإبداع البصري</a><a href="#gallery">معرض الأعمال</a><a href="#about">من أنا</a></div><div class="navright"><span class="availability">متاح للمشاريع</span><a class="navbtn" href="#contact">تواصل معي ↗</a><button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="فتح القائمة" aria-expanded="false" aria-controls="mobileMenu">☰</button></div></nav><div class="mobile-menu" id="mobileMenu"><a href="#services">الخدمات</a><a href="#creative">الإبداع البصري</a><a href="#gallery">معرض الأعمال</a><a href="#about">من أنا</a><a href="#contact">تواصل معي ↗</a></div></div></header>
 <main>
 <section class="wrap hero"><div class="hero-copy reveal"><div class="eyebrow">MUHSIN CREATIVE STUDIO · PORTFOLIO</div><h1>أصنع من الفكرة<br>شيئاً <span>يُلفت النظر.</span></h1><p>من دقة البيانات واحترافية المستندات، إلى سحر التصوير والإبداع بالذكاء الاصطناعي. مساحة واحدة تجمع أعمالي الرقمية والبصرية.</p><div class="hero-actions"><a class="btn btn-primary" href="#gallery">اكتشف أعمالي <span>↙</span></a><a class="btn btn-outline" href="#services">استكشف مهاراتي</a></div><div class="hero-meta"><div><strong>01 / OFFICE</strong>مستندات وبيانات</div><div><strong>02 / VISUAL</strong>تصوير وتحرير</div><div><strong>03 / AI</strong>إبداع رقمي</div></div></div>
 <div class="hero-art reveal"><img class="hero-photo" src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1100&q=85" alt="مشهد فني إبداعي"><div class="hero-photo-shade"></div><div class="hero-frame"></div><div class="hero-stamp"><div><b>✳</b>IDEAS<br>MADE VISUAL</div></div><div class="floating-chip">✦ Creative direction <span>●</span></div><div class="hero-label"><strong>Visual stories.</strong>أفكار تتحول إلى تجربة</div></div></section>
@@ -83,5 +198,23 @@ const range=document.getElementById('compareRange'),before=document.getElementBy
 document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));btn.classList.add('active');let f=btn.dataset.filter;document.querySelectorAll('.gallery-item').forEach(item=>item.classList.toggle('hide',f!=='all'&&item.dataset.cat!==f))}));
 const modal=document.getElementById('imageModal'),modalImg=document.getElementById('modalImage');document.querySelectorAll('.gallery-item img').forEach(img=>img.addEventListener('click',()=>{modalImg.src=img.src;modal.classList.add('open')}));document.getElementById('modalClose').onclick=()=>modal.classList.remove('open');modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+const mobileToggle=document.getElementById('mobileMenuToggle');
+const mobileMenu=document.getElementById('mobileMenu');
+if(mobileToggle&&mobileMenu){
+  mobileToggle.addEventListener('click',()=>{
+    const isOpen=mobileMenu.classList.toggle('open');
+    mobileToggle.setAttribute('aria-expanded',String(isOpen));
+    mobileToggle.setAttribute('aria-label',isOpen?'إغلاق القائمة':'فتح القائمة');
+    mobileToggle.textContent=isOpen?'×':'☰';
+  });
+  mobileMenu.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{
+    mobileMenu.classList.remove('open');
+    mobileToggle.setAttribute('aria-expanded','false');
+    mobileToggle.setAttribute('aria-label','فتح القائمة');
+    mobileToggle.textContent='☰';
+  }));
+}
+
 </script>
 </body></html>
